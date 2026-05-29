@@ -1,21 +1,4 @@
-// import { GlobalStyles } from "./styles/globalStyles";
-// import { Routes } from "./routes/routes";
-// import { Layout } from "./components/Layout/Layout";
-// import { Navbar } from "./components/Navbar/Navbar";
-
-// function App() {
-//   return (
-//     <Layout>
-//       <GlobalStyles />
-//       <Navbar />
-//       <Routes />
-//     </Layout>
-//   );
-// }
-
-// export default App;
-
-// App.jsx
+import { Routes } from "./routes/routes";
 import React from "react";
 import {
   AppBar,
@@ -78,7 +61,6 @@ export default function App() {
   return (
     <Box
       sx={{
-        backgroundColor: "#f5f5f5",
         minHeight: "100vh",
         p: 2,
       }}
@@ -96,7 +78,7 @@ export default function App() {
           elevation={0}
           sx={{
             backgroundColor: "#d9641c",
-            height: 78,
+            height: 85,
             justifyContent: "center",
           }}
         >
@@ -115,7 +97,7 @@ export default function App() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                height: 30,
+                height: 35,
               }}
             >
               <Typography
@@ -142,13 +124,9 @@ export default function App() {
               {topMenu.map((item, index) => (
                 <Button
                   key={index}
-                  variant={item === "Ventas" ? "contained" : "text"}
                   sx={{
                     color: "#fff",
-                    backgroundColor:
-                      item === "Ventas"
-                        ? "rgba(255,255,255,0.2)"
-                        : "transparent",
+                    backgroundColor: "transparent",
                     textTransform: "none",
                     fontSize: 13,
                     minWidth: "auto",
