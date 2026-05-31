@@ -1,13 +1,28 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { LayoutWrapper } from "./Layout/LayoutStyles";
+import React, { useEffect } from "react";
+import { Paper } from "@mui/material";
 
-export const Layout = ({ children }) => {
+import TopBar from "./TopBar";
+import RibbonMenu from "./RibbonMenu";
+import QuickActions from "./QuickActions";
+import { useLocation } from "react-router-dom";
+
+export default function Layout({ children }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
-  return <LayoutWrapper>{children}</LayoutWrapper>;
-};
+  return (
+    <Paper
+      elevation={4}
+      sx={{
+        borderRadius: "18px",
+        overflow: "hidden",
+      }}
+    >
+      <TopBar />
+      <QuickActions />
+      {children}
+    </Paper>
+  );
+}
