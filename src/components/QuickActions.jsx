@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, IconButton } from "@mui/material";
-import { quickActions } from "../data/menuData";
+import { ventasQuickActions } from "../data/menuData";
 
 export default function QuickActions() {
   return (
@@ -14,7 +14,7 @@ export default function QuickActions() {
         overflowX: "auto",
       }}
     >
-      {quickActions.map((action, index) => (
+      {ventasQuickActions.map((action, index) => (
         <Box
           key={index}
           sx={{

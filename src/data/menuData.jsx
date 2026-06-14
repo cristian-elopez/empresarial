@@ -16,30 +16,83 @@ export const topMenu = [
   "Archivo",
   "Ventas",
   "Compras",
-  "Fondos",
-  "Contabilidad",
+  "Clientes",
+  "Proveedores",
   "Stock",
-  "Recursos Humanos",
-  "Archivo",
+  "Caja",
   "Informes",
   "Configuración",
   "Usuarios",
   "Ayuda",
 ];
 
-export const quickActions = [
+export const ventasQuickActions = [
   { icon: <DescriptionOutlinedIcon />, label: "Factura" },
   { icon: <LocalShippingOutlinedIcon />, label: "Remito" },
   { icon: <ShoppingCartOutlinedIcon />, label: "Pedido" },
   { icon: <AttachMoneyOutlinedIcon />, label: "Presupuesto" },
-  { icon: <InsertDriveFileOutlinedIcon />, label: "Otros" },
   { icon: <SearchOutlinedIcon />, label: "Consulta" },
   { icon: <HighlightOffOutlinedIcon />, label: "Anulación" },
-  { icon: <ReceiptLongOutlinedIcon />, label: "Facturación\nElectrónica" },
   { icon: <AccountBalanceOutlinedIcon />, label: "Cuenta\nCorriente" },
   { icon: <SwapHorizOutlinedIcon />, label: "Movimientos" },
-  { icon: <ReceiptLongOutlinedIcon />, label: "Planilla\nde cobros" },
-  { icon: <WarningAmberOutlinedIcon />, label: "Deudas\nTotales" },
+];
+
+export const comprasQuickActions = [
+  { icon: <DescriptionOutlinedIcon />, label: "Factura" },
+  { icon: <LocalShippingOutlinedIcon />, label: "Remito" },
+  { icon: <ShoppingCartOutlinedIcon />, label: "Pedido" },
+  { icon: <AttachMoneyOutlinedIcon />, label: "Presupuesto" },
+  { icon: <SearchOutlinedIcon />, label: "Consulta" },
+  { icon: <HighlightOffOutlinedIcon />, label: "Anulación" },
+  { icon: <AccountBalanceOutlinedIcon />, label: "Cuenta\nCorriente" },
   { icon: <MonetizationOnOutlinedIcon />, label: "Precios" },
-  { icon: <PercentOutlinedIcon />, label: "Bonificaciones" },
+];
+
+export const clientesQuickActions = [
+  { icon: <DescriptionOutlinedIcon />, label: "Crea" },
+  { icon: <DescriptionOutlinedIcon />, label: "Modifica" },
+  { icon: <HighlightOffOutlinedIcon />, label: "Elimina" },
+  { icon: <SearchOutlinedIcon />, label: "Consulta" },
+  { icon: <AccountBalanceOutlinedIcon />, label: "Cuenta\nCorriente" },
+];
+
+export const ProveedoresQuickActions = [
+  { icon: <DescriptionOutlinedIcon />, label: "Crea" },
+  { icon: <DescriptionOutlinedIcon />, label: "Modifica" },
+  { icon: <HighlightOffOutlinedIcon />, label: "Elimina" },
+  { icon: <SearchOutlinedIcon />, label: "Consulta" },
+  { icon: <AccountBalanceOutlinedIcon />, label: "Cuenta\nCorriente" },
+];
+
+export const StockQuickActions = [
+  { icon: <DescriptionOutlinedIcon />, label: "Productos" },
+  { icon: <DescriptionOutlinedIcon />, label: "Categorias" },
+  { icon: <DescriptionOutlinedIcon />, label: "Marcas" },
+  { icon: <DescriptionOutlinedIcon />, label: "Ajuste" },
+];
+
+export const InformesQuickActions = [
+  { icon: <DescriptionOutlinedIcon />, label: "Ventas por día" },
+  { icon: <DescriptionOutlinedIcon />, label: "Ventas por mes" },
+  { icon: <DescriptionOutlinedIcon />, label: "Productos más vendidos" },
+  { icon: <DescriptionOutlinedIcon />, label: "Ganancias" },
+  { icon: <DescriptionOutlinedIcon />, label: "IVA" },
+];
+
+export const ConfiguracionQuickActions = [
+  { icon: <DescriptionOutlinedIcon />, label: "Datos de empresa" },
+  { icon: <DescriptionOutlinedIcon />, label: "Moneda" },
+  { icon: <DescriptionOutlinedIcon />, label: "Copia de seguridad" },
+];
+
+export const UsuariosQuickActions = [
+  { icon: <DescriptionOutlinedIcon />, label: "Crea" },
+  { icon: <DescriptionOutlinedIcon />, label: "Modifica" },
+  { icon: <DescriptionOutlinedIcon />, label: "Elimina" },
+  { icon: <DescriptionOutlinedIcon />, label: "Permisos" },
+  { icon: <DescriptionOutlinedIcon />, label: "Salir" },
+];
+
+export const AyudaQuickActions = [
+  { icon: <DescriptionOutlinedIcon />, label: "Soporte" },
 ];

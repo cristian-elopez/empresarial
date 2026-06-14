@@ -20,8 +20,6 @@ export default function Layout({ children }) {
         overflow: "hidden",
       }}
     >
-      <TopBar />
-      <QuickActions />
       {children}
     </Paper>
   );
