@@ -10,14 +10,13 @@ export default function App() {
     <Box
       sx={{
         minHeight: "100vh",
-        p: 2,
       }}
     >
       <Layout>
         <TopBar />
         <QuickActions />
-        <Routes />
       </Layout>
+      <Routes />
     </Box>
   );
 }
