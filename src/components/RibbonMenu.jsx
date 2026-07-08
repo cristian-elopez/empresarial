@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Button, Stack } from "@mui/material";
-import { topMenu } from "../data/menuData";
+import { useSelector } from "react-redux";
 
 export default function RibbonMenu() {
+  const { items } = useSelector((state) => state.toolItems);
+
   return (
     <Stack
       direction="row"
@@ -12,7 +14,7 @@ export default function RibbonMenu() {
         overflowX: "auto",
       }}
     >
-      {topMenu.map((item, index) => (
+      {items.map((item, index) => (
         <Button
           key={index}
           sx={{
