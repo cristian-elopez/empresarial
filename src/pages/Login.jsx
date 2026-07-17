@@ -80,7 +80,7 @@ export default function Login() {
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            label="Recordarme"
           />
           <Button
             type="submit"
@@ -88,7 +88,7 @@ export default function Login() {
             variant="contained"
             sx={{ mt: 3, mb: 2, bgcolor: "#d9641c" }}
           >
-            Sign In
+            Ingresar
           </Button>
           <Grid container>
             <Grid item xs>

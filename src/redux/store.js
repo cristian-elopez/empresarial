@@ -10,7 +10,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  toolItems: toolItemSlice,
+  toolMenuItems: toolItemSlice,
 });
 
 const persistedReducers = persistReducer(persistConfig, rootReducer);

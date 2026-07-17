@@ -1,9 +1,12 @@
 import React from "react";
 import { Box, Button, Stack } from "@mui/material";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedItem } from "../redux/toolItemSlice";
 
 export default function RibbonMenu() {
-  const { items } = useSelector((state) => state.toolItems);
+  const { toolMenuItems } = useSelector((state) => state.toolMenuItems);
+
+  const dispatch = useDispatch();
 
   return (
     <Stack
@@ -14,7 +17,7 @@ export default function RibbonMenu() {
         overflowX: "auto",
       }}
     >
-      {items.map((item, index) => (
+      {toolMenuItems.map((item, index) => (
         <Button
           key={index}
           sx={{
@@ -28,8 +31,9 @@ export default function RibbonMenu() {
               backgroundColor: "rgba(255,255,255,0.15)",
             },
           }}
+          onClick={() => dispatch(setSelectedItem(item))}
         >
-          {item}
+          {item.name}
         </Button>
       ))}
     </Stack>

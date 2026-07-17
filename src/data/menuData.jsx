@@ -12,87 +12,119 @@ import WarningAmberOutlinedIcon from "@mui/icons-material/WarningAmberOutlined";
 import PercentOutlinedIcon from "@mui/icons-material/PercentOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 
-export const topMenu = [
-  "Archivo",
-  "Ventas",
-  "Compras",
-  "Clientes",
-  "Proveedores",
-  "Stock",
-  "Caja",
-  "Informes",
-  "Configuración",
-  "Usuarios",
-  "Ayuda",
-];
-
-export const ventasQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Factura" },
-  { icon: <LocalShippingOutlinedIcon />, label: "Remito" },
-  { icon: <ShoppingCartOutlinedIcon />, label: "Pedido" },
-  { icon: <AttachMoneyOutlinedIcon />, label: "Presupuesto" },
-  { icon: <SearchOutlinedIcon />, label: "Consulta" },
-  { icon: <HighlightOffOutlinedIcon />, label: "Anulación" },
-  { icon: <AccountBalanceOutlinedIcon />, label: "Cuenta\nCorriente" },
-  { icon: <SwapHorizOutlinedIcon />, label: "Movimientos" },
-];
-
-export const comprasQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Factura" },
-  { icon: <LocalShippingOutlinedIcon />, label: "Remito" },
-  { icon: <ShoppingCartOutlinedIcon />, label: "Pedido" },
-  { icon: <AttachMoneyOutlinedIcon />, label: "Presupuesto" },
-  { icon: <SearchOutlinedIcon />, label: "Consulta" },
-  { icon: <HighlightOffOutlinedIcon />, label: "Anulación" },
-  { icon: <AccountBalanceOutlinedIcon />, label: "Cuenta\nCorriente" },
-  { icon: <MonetizationOnOutlinedIcon />, label: "Precios" },
-];
-
-export const clientesQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Crea" },
-  { icon: <DescriptionOutlinedIcon />, label: "Modifica" },
-  { icon: <HighlightOffOutlinedIcon />, label: "Elimina" },
-  { icon: <SearchOutlinedIcon />, label: "Consulta" },
-  { icon: <AccountBalanceOutlinedIcon />, label: "Cuenta\nCorriente" },
-];
-
-export const ProveedoresQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Crea" },
-  { icon: <DescriptionOutlinedIcon />, label: "Modifica" },
-  { icon: <HighlightOffOutlinedIcon />, label: "Elimina" },
-  { icon: <SearchOutlinedIcon />, label: "Consulta" },
-  { icon: <AccountBalanceOutlinedIcon />, label: "Cuenta\nCorriente" },
-];
-
-export const StockQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Productos" },
-  { icon: <DescriptionOutlinedIcon />, label: "Categorias" },
-  { icon: <DescriptionOutlinedIcon />, label: "Marcas" },
-  { icon: <DescriptionOutlinedIcon />, label: "Ajuste" },
-];
-
-export const InformesQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Ventas por día" },
-  { icon: <DescriptionOutlinedIcon />, label: "Ventas por mes" },
-  { icon: <DescriptionOutlinedIcon />, label: "Productos más vendidos" },
-  { icon: <DescriptionOutlinedIcon />, label: "Ganancias" },
-  { icon: <DescriptionOutlinedIcon />, label: "IVA" },
-];
-
-export const ConfiguracionQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Datos de empresa" },
-  { icon: <DescriptionOutlinedIcon />, label: "Moneda" },
-  { icon: <DescriptionOutlinedIcon />, label: "Copia de seguridad" },
-];
-
-export const UsuariosQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Crea" },
-  { icon: <DescriptionOutlinedIcon />, label: "Modifica" },
-  { icon: <DescriptionOutlinedIcon />, label: "Elimina" },
-  { icon: <DescriptionOutlinedIcon />, label: "Permisos" },
-  { icon: <DescriptionOutlinedIcon />, label: "Salir" },
-];
-
-export const AyudaQuickActions = [
-  { icon: <DescriptionOutlinedIcon />, label: "Soporte" },
+export const menuItems = [
+  {
+    id: "Archivo",
+    name: "Archivo",
+    actions: [
+      { id: 1, label: "Abrir", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Guardar", icon: <DescriptionOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Ventas",
+    name: "Ventas",
+    actions: [
+      { id: 1, label: "Factura", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Remito", icon: <LocalShippingOutlinedIcon /> },
+      { id: 3, label: "Pedido", icon: <ShoppingCartOutlinedIcon /> },
+      { id: 4, label: "Presupuesto", icon: <AttachMoneyOutlinedIcon /> },
+      { id: 5, label: "Consulta", icon: <SearchOutlinedIcon /> },
+      { id: 6, label: "Anulación", icon: <HighlightOffOutlinedIcon /> },
+      // prettier-ignore
+      { id: 7, label: "Cuenta\nCorriente", icon: <AccountBalanceOutlinedIcon />},
+      { id: 8, label: "Movimientos", icon: <SwapHorizOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Compras",
+    name: "Compras",
+    actions: [
+      { id: 1, label: "Factura", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Remito", icon: <LocalShippingOutlinedIcon /> },
+      { id: 3, label: "Pedido", icon: <ShoppingCartOutlinedIcon /> },
+      { id: 4, label: "Presupuesto", icon: <AttachMoneyOutlinedIcon /> },
+      { id: 5, label: "Consulta", icon: <SearchOutlinedIcon /> },
+      { id: 6, label: "Anulación", icon: <HighlightOffOutlinedIcon /> },
+      // prettier-ignore
+      { id: 7, label: "Cuenta\nCorriente", icon: <AccountBalanceOutlinedIcon /> },
+      { id: 8, label: "Precios", icon: <MonetizationOnOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Clientes",
+    name: "Clientes",
+    actions: [
+      { id: 1, label: "Crea", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Modifica", icon: <DescriptionOutlinedIcon /> },
+      { id: 3, label: "Elimina", icon: <HighlightOffOutlinedIcon /> },
+      { id: 4, label: "Consulta", icon: <SearchOutlinedIcon /> },
+      // prettier-ignore
+      { id: 5, label: "Cuenta\nCorriente", icon: <AccountBalanceOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Proveedores",
+    name: "Proveedores",
+    actions: [
+      { id: 1, label: "Crea", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Modifica", icon: <DescriptionOutlinedIcon /> },
+      { id: 3, label: "Elimina", icon: <HighlightOffOutlinedIcon /> },
+      { id: 4, label: "Consulta", icon: <SearchOutlinedIcon /> },
+      // prettier-ignore
+      { id: 5, label: "Cuenta\nCorriente", icon: <AccountBalanceOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Stock",
+    name: "Stock",
+    actions: [
+      { id: 1, label: "Productos", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Categorias", icon: <DescriptionOutlinedIcon /> },
+      { id: 3, label: "Marcas", icon: <DescriptionOutlinedIcon /> },
+      { id: 4, label: "Ajuste", icon: <DescriptionOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Caja",
+    name: "Caja",
+    actions: [{ id: 1, label: "Consulta", icon: <DescriptionOutlinedIcon /> }],
+  },
+  {
+    id: "Informes",
+    name: "Informes",
+    actions: [
+      { id: 1, label: "Ventas por día", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Ventas por mes", icon: <DescriptionOutlinedIcon /> },
+      // prettier-ignore
+      { id: 3, label: "Productos más vendidos", icon: <DescriptionOutlinedIcon /> },
+      { id: 4, label: "Ganancias", icon: <DescriptionOutlinedIcon /> },
+      { id: 5, label: "IVA", icon: <DescriptionOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Configuración",
+    name: "Configuración",
+    actions: [
+      { id: 1, label: "Datos de empresa", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Moneda", icon: <DescriptionOutlinedIcon /> },
+      { id: 3, label: "Copia de seguridad", icon: <DescriptionOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Usuarios",
+    name: "Usuarios",
+    actions: [
+      { id: 1, label: "Crea", icon: <DescriptionOutlinedIcon /> },
+      { id: 2, label: "Modifica", icon: <DescriptionOutlinedIcon /> },
+      { id: 3, label: "Elimina", icon: <DescriptionOutlinedIcon /> },
+      { id: 4, label: "Permisos", icon: <DescriptionOutlinedIcon /> },
+      { id: 5, label: "Salir", icon: <DescriptionOutlinedIcon /> },
+    ],
+  },
+  {
+    id: "Ayuda",
+    name: "Ayuda",
+    actions: [{ id: 1, label: "Soporte", icon: <DescriptionOutlinedIcon /> }],
+  },
 ];

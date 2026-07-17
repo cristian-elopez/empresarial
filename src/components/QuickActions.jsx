@@ -1,8 +1,11 @@
 import React from "react";
 import { Box, Typography, IconButton } from "@mui/material";
-import { ventasQuickActions } from "../data/menuData";
+import { menuItems } from "../data/menuData";
+import { useSelector } from "react-redux";
 
 export default function QuickActions() {
+  const { selectedItem } = useSelector((state) => state.toolMenuItems);
+
   return (
     <Box
       sx={{
@@ -14,7 +17,7 @@ export default function QuickActions() {
         overflowX: "auto",
       }}
     >
-      {ventasQuickActions.map((action, index) => (
+      {selectedItem.actions.map((action, index) => (
         <Box
           key={index}
           sx={{
@@ -31,7 +34,7 @@ export default function QuickActions() {
               mb: 0.5,
             }}
           >
-            {action.icon}
+            "O"
           </IconButton>
 
           <Typography
