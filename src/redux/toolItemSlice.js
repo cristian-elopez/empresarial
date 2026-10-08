@@ -3,7 +3,7 @@ import { menuItems } from "../data/menuData";
 
 const INITIAL_STATE = {
   toolMenuItems: menuItems,
-  selectedItem: menuItems[0],
+  selectedItem: menuItems[1],
 };
 
 export const toolItemSlice = createSlice({
@@ -13,6 +13,7 @@ export const toolItemSlice = createSlice({
     setSelectedItem: (state, action) => {
       state.selectedItem = action.payload;
     },
+    toolMenuItems: (state) => state,
   },
 });
 

@@ -4,7 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { setSelectedItem } from "../redux/toolItemSlice";
 
 export default function RibbonMenu() {
-  const { toolMenuItems } = useSelector((state) => state.toolMenuItems);
+  const { toolMenuItems, selectedItem } = useSelector(
+    (state) => state.toolMenuItems,
+  );
 
   const dispatch = useDispatch();
 
@@ -17,25 +19,34 @@ export default function RibbonMenu() {
         overflowX: "auto",
       }}
     >
-      {toolMenuItems.map((item, index) => (
-        <Button
-          key={index}
-          sx={{
-            color: "#fff",
-            backgroundColor: "transparent",
-            textTransform: "none",
-            fontSize: 13,
-            minWidth: "auto",
-            px: 1.2,
-            "&:hover": {
-              backgroundColor: "rgba(255,255,255,0.15)",
-            },
-          }}
-          onClick={() => dispatch(setSelectedItem(item))}
-        >
-          {item.name}
-        </Button>
-      ))}
+      {toolMenuItems.map((item, index) => {
+        const isSelected = selectedItem?.id === item.id;
+
+        return (
+          <Button
+            key={index}
+            sx={{
+              color: "#fff",
+              backgroundColor: isSelected
+                ? "rgba(255,255,255,0.15)"
+                : "transparent",
+              textTransform: "none",
+              fontSize: 13,
+              minWidth: "auto",
+              px: 1.2,
+              "&:hover": {
+                backgroundColor: "rgba(255,255,255,0.15)",
+              },
+              "&:active": {
+                backgroundColor: "rgba(255,255,255,0.15)",
+              },
+            }}
+            onClick={() => dispatch(setSelectedItem(item))}
+          >
+            {item.name}
+          </Button>
+        );
+      })}
     </Stack>
   );
 }

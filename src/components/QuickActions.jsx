@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, Typography, IconButton } from "@mui/material";
-import { menuItems } from "../data/menuData";
 import { useSelector } from "react-redux";
+import empresarialIcons from "../data/icons";
+
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 
 export default function QuickActions() {
   const { selectedItem } = useSelector((state) => state.toolMenuItems);
@@ -17,38 +19,42 @@ export default function QuickActions() {
         overflowX: "auto",
       }}
     >
-      {selectedItem.actions.map((action, index) => (
-        <Box
-          key={index}
-          sx={{
-            minWidth: 80,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            color: "#777",
-          }}
-        >
-          <IconButton
-            sx={{
-              color: "#888",
-              mb: 0.5,
-            }}
-          >
-            "O"
-          </IconButton>
+      {selectedItem.actions.map((action, index) => {
+        const Icon = empresarialIcons[action.icon];
 
-          <Typography
-            align="center"
+        return (
+          <Box
+            key={index}
             sx={{
-              fontSize: 11,
-              lineHeight: 1.1,
-              whiteSpace: "pre-line",
+              minWidth: 80,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              color: "#777",
             }}
           >
-            {action.label}
-          </Typography>
-        </Box>
-      ))}
+            <IconButton
+              sx={{
+                color: "#888",
+                mb: 0.5,
+              }}
+            >
+              {Icon && <Icon />}
+            </IconButton>
+
+            <Typography
+              align="center"
+              sx={{
+                fontSize: 11,
+                lineHeight: 1.1,
+                whiteSpace: "pre-line",
+              }}
+            >
+              {action.label}
+            </Typography>
+          </Box>
+        );
+      })}
     </Box>
   );
 }
