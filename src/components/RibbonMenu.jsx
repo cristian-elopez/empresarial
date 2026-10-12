@@ -1,14 +1,20 @@
-import React from "react";
-import { Box, Button, Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedItem } from "../redux/toolItemSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function RibbonMenu() {
   const { toolMenuItems, selectedItem } = useSelector(
     (state) => state.toolMenuItems,
   );
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const handleMenuClick = (item) => {
+    dispatch(setSelectedItem(item));
+    navigate(item.path);
+  };
 
   return (
     <Stack
@@ -41,7 +47,9 @@ export default function RibbonMenu() {
                 backgroundColor: "rgba(255,255,255,0.15)",
               },
             }}
-            onClick={() => dispatch(setSelectedItem(item))}
+            onClick={() => {
+              handleMenuClick(item);
+            }}
           >
             {item.name}
           </Button>

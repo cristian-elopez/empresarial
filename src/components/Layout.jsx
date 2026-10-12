@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Paper } from "@mui/material";
-
-import TopBar from "./TopBar";
-import RibbonMenu from "./RibbonMenu";
-import QuickActions from "./QuickActions";
 import { useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import TopBar from "./TopBar";
+import QuickActions from "./QuickActions";
 
-export default function Layout({ children }) {
+export default function Layout() {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -20,7 +19,12 @@ export default function Layout({ children }) {
         overflow: "hidden",
       }}
     >
-      {children}
+      <TopBar />
+      <QuickActions />
+
+      <main>
+        <Outlet />
+      </main>
     </Paper>
   );
 }

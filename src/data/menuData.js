@@ -2,6 +2,7 @@ export const menuItems = [
   {
     id: "Archivo",
     name: "Archivo",
+    path: "/archivo",
     actions: [
       { id: 1, label: "Abrir", icon: "open" },
       { id: 2, label: "Guardar", icon: "save" },
@@ -10,6 +11,7 @@ export const menuItems = [
   {
     id: "Ventas",
     name: "Ventas",
+    path: "/ventas",
     actions: [
       { id: 1, label: "Factura", icon: "bill" },
       { id: 2, label: "Remito", icon: "truck" },
@@ -25,6 +27,7 @@ export const menuItems = [
   {
     id: "Compras",
     name: "Compras",
+    path: "/compras",
     actions: [
       { id: 1, label: "Factura", icon: "bill" },
       { id: 2, label: "Remito", icon: "truck" },
@@ -40,6 +43,7 @@ export const menuItems = [
   {
     id: "Clientes",
     name: "Clientes",
+    path: "/clientes",
     actions: [
       { id: 1, label: "Crea", icon: "create" },
       { id: 2, label: "Modifica", icon: "edit" },
@@ -52,6 +56,7 @@ export const menuItems = [
   {
     id: "Proveedores",
     name: "Proveedores",
+    path: "/proveedores",
     actions: [
       { id: 1, label: "Crea", icon: "create" },
       { id: 2, label: "Modifica", icon: "edit" },
@@ -64,6 +69,7 @@ export const menuItems = [
   {
     id: "Stock",
     name: "Stock",
+    path: "/stock",
     actions: [
       { id: 1, label: "Productos", icon: "products" },
       { id: 2, label: "Categorias", icon: "categories" },
@@ -74,11 +80,13 @@ export const menuItems = [
   {
     id: "Caja",
     name: "Caja",
+    path: "/caja",
     actions: [{ id: 1, label: "Consulta", icon: "search" }],
   },
   {
     id: "Informes",
     name: "Informes",
+    path: "/informes",
     actions: [
       { id: 1, label: "Ventas por día", icon: "report" },
       { id: 2, label: "Ventas por mes", icon: "report" },
@@ -91,6 +99,7 @@ export const menuItems = [
   {
     id: "Configuración",
     name: "Configuración",
+    path: "/configuracion",
     actions: [
       { id: 1, label: "Datos de empresa", icon: "enterprise" },
       { id: 2, label: "Moneda", icon: "coin" },
@@ -100,6 +109,7 @@ export const menuItems = [
   {
     id: "Usuarios",
     name: "Usuarios",
+    path: "/usuarios",
     actions: [
       { id: 1, label: "Crea", icon: "create" },
       { id: 2, label: "Modifica", icon: "edit" },
@@ -111,6 +121,7 @@ export const menuItems = [
   {
     id: "Ayuda",
     name: "Ayuda",
+    path: "/ayuda",
     actions: [{ id: 1, label: "Soporte", icon: "support" }],
   },
 ];

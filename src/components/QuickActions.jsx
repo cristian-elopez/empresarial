@@ -1,9 +1,6 @@
-import React from "react";
 import { Box, Typography, IconButton } from "@mui/material";
 import { useSelector } from "react-redux";
 import empresarialIcons from "../data/icons";
-
-import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 
 export default function QuickActions() {
   const { selectedItem } = useSelector((state) => state.toolMenuItems);
